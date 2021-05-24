@@ -1,0 +1,89 @@
+body{
+    margin: 5vh auto;
+    max-width: 600px;
+    text-align: left;
+    background-color: black;
+    box-sizing: border-box;
+}
+
+.principal{
+    background-color: white;
+    max-height: 90vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 4fr 1fr 1fr 2fr;
+    grid-template-areas: 
+    "header"
+    "imagen"
+    "botonera"
+    "tags"
+    "texst";
+}
+
+.header{
+    padding: 1vh;
+    grid-area: header;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "html5 titulo titulo . . . . ellipsis"
+}
+
+.header > .fa-html5{
+    text-align: center;
+    padding-top: 2vh;
+    grid-area: html5;
+}
+
+.header > .textosHeader{
+    grid-area: titulo;
+    padding: 0px;
+}
+
+.header > .fa-ellipsis-v{
+    padding-top: 2vh;
+    grid-area: ellipsis;
+    text-align: right;
+}
+
+.imagen{
+    grid-area: imagen;
+    width: 100%;
+}
+
+.botonera{
+    padding: 1vh;
+    grid-area: botonera;
+    display: grid;
+    grid-template-columns: repeat(16,1fr);
+    grid-template-rows: auto;
+    grid-template-areas: "fa-heart fa-cloud fa-paper-plane . . . . . . . . . . . . fa-bookmark";
+}
+
+.botonera>.fa-heart{
+    grid-area:fa-heart;
+}
+.botonera>.fa-comment{
+    grid-area:fa-cloud;
+}
+.botonera>.fa-paper-plane{
+    grid-area:fa-paper-plane;
+}
+.botonera>.fa-bookmark{
+    grid-area:fa-bookmark;
+    text-align: right;
+}
+
+.tags{
+    padding-left: 1vh;
+    padding-right: 1vh;
+    grid-area: tags;
+}
+
+.texst{
+    padding-left: 1vh;
+    padding-right: 1vh;
+    padding: 1vh;
+    grid-area: texst;
+}
